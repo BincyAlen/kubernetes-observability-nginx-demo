@@ -6,35 +6,35 @@ This project demonstrates a Kubernetes-based web application deployed locally us
 
 ##Overview
 
-- **Application:** Nginx web server  
-- **Cluster:** Local Minikube (on macOS M1)  
-- **Monitoring Stack:** Prometheus + Grafana (installed via Helm)  
-- **Infrastructure-as-Code:** Kubernetes YAML manifests
+- Application: Nginx web server  
+- Cluster: Local Minikube (on macOS M1)  
+- Monitoring Stack: Prometheus + Grafana (installed via Helm)  
+- Infrastructure-as-Code: Kubernetes YAML manifests
 
 ---
 
 ##Steps to Reproduce
 
-### 1️⃣ Prerequisites
+## 1. Prerequisites
 - Docker Desktop (running)
 - Minikube
 - Kubectl
 - Helm
 - macOS / Linux shell
 
-### 2️⃣ Start Minikube
+## 2. Start Minikube
 ```bash
 minikube start --driver=docker
 ```
 
-### 3️⃣ Deploy Nginx
+## 3. Deploy Nginx
 ```bash
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl get all
 ```
 
-### 4️⃣ Access Nginx
+## 4. Access Nginx
 ```bash
 minikube service nginx-demo-service
 ```
